@@ -1,0 +1,17 @@
+{
+  "name": "krimi-app-parcel",
+  "version": "1.0.0",
+  "description": "Example using OpenLayers with Parcel",
+  "scripts": {
+    "start": "parcel serve index.html",
+    "build": "parcel build --public-url . index.html"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.2",
+    "ol": "^6.6.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-rc.0"
+  },
+  "browserslist": "defaults"
+}

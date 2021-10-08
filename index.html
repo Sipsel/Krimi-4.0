@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using OpenLayers with Parcel</title>
+    <style>
+      @import "node_modules/ol/ol.css";
+      @import "style.css";
+      @import "node_modules/bootstrap/dist/css/bootstrap.css";
+    </style>
+  <script src="./main.js" type="module"></script>
+  <script src="modules/user_input.js" type="module"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="overlay"></div>
+    <div id="name-popup">
+      <div id="name-popup-container">
+        <div id="name-popup-header">
+          <h1>Wie heißt du?</h1>
+        </div>
+        <div id="name-popup-body" class="input-group">
+          <input type="text" class="input-group-text" id="name-input">
+          <br>
+          <button type="button" class="btn btn-success" id="name-input-btn">
+            Weiter
+          </button>
+        </div>
+      </div>
+    </div>
+    <button id="current-case">Zum jetzigen Punkt wechseln</button>
+    
+    </script>
+  </body>
+</html>
