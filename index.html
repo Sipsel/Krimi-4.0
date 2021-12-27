@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <meta charset="utf-8">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Using OpenLayers with Parcel</title>
+    <title>Krimi 4.0</title>
     <style>
-      @import "node_modules/ol/ol.css";
-      @import "style.css";
-      @import "node_modules/bootstrap/dist/css/bootstrap.css";
+      @import "./node_modules/ol/ol.css";
+      @import "./css/style.css";
+      @import "./node_modules/bootstrap/dist/css/bootstrap.css";
     </style>
   <script src="./main.js" type="module"></script>
-  <script src="modules/user_input.js" type="module"></script>
+  <script src="./modules/user_input.js" type="module"></script>
+  <script src="modules/ui_funcs.js"></script>
   </head>
   <body>
     <div id="map"></div>
     <div id="overlay"></div>
+    <div id="dialog">
+      <div id="dialog-text">
+        <p class="p-normal"> 
+        <span id='dialog-text-output' class="type" style="--n:110">Hallo, <br> mein Name ist Remigius Rott. Als mein neuer Assistent musst du noch diesen Ausweis ausfüllen (auf weiter drücken)</span>
+      </p>
+      <div id="dialog-img">
+        <img src="./img/Detective.png" alt="" id="dialog-img-img">
+      </div>
+      
+    </div>
+    <button class="btn btn-primary" id="dialog-button">Weiter</button>
+     
+
+    </div>
     <div id="name-popup">
       <div id="name-popup-container">
         <img src="img/Presseausweis/image2vector.svg" id="presseausweis">
@@ -26,11 +47,44 @@
           <input type="text" id="presseausweis-input-strasse" placeholder="Strasse">
           <input type="text" id="presseausweis-input-ort" placeholder="Ort">
           <button class="btn btn-success" id="presseausweis-input-button">Weiter</button>
+          <input type="file" id="files" name="pic-file"  onchange="previewimage(this)" class="btn btn-primary">
         </div>
      </div>
     </div>
-    
-    
-    </script>
+    <div id="fly-buttons">
+      
+      <button id="fly-to-fhdw">Zur FHDW</button>
+      <button id="fly-to-kalk_oefen">Zu den Kalköfen</button>
+      <button id="fly-to-paper_creator">Zum Papierschöpfer</button>
+      <button id="fly-to-paper_factory">Zur Gohrsmühle Zanders</button>
+
+    </div>
+    <div id="play-button" class="no-display">
+      <button>Spielen</button>
+      
+    </div>
+    <div id="game-window">
+      <div id="game-window-fhdw" class="no-display game-container">
+        <video class="game-video">
+          <source src="./vid/fhdw.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div id="game-window-kalk_oefen" class="no-display game-container">
+        <video class="game-video">
+          <source src="./vid/Wimmelbild.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div id="game-window-paper_creator" class="no-display game-container">
+        <video class="game-video">
+          <source src="./vid/paper_mile.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div id="game-window-paper_mill" class="no-display game-container">
+        <video class="game-video">
+          <source src="./vid/paper_mile.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
   </body>
+  <script src="modules/button-events.js" type="module"></script>
 </html>

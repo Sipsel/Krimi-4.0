@@ -1,0 +1,189 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.disabled{
+  pointer-events: none;
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+.no-display
+{
+  display: none !important;
+}
+#map {
+  width: 100%;
+  height:100vh;
+  position: relative;
+  z-index: 0;
+}
+#overlay {
+  top:0;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  transition: opacity 3s ease-out;
+  opacity: 0.8;
+  background-color: rgba(0,0,0,0.8);
+  /*display:none;*/
+  z-index: 0;
+}
+#opacity-0
+{
+  opacity: 0;
+}
+
+#name-popup{
+  display:grid;
+  width: 100%;
+  height:100vh;
+  top: 0;
+  position: absolute;
+  display: none;
+}
+#name-popup-container{
+  margin: auto;
+  background-color: white;
+  
+  border-radius: 10px;
+  text-align: center;
+}
+#presseausweis{
+  width: 40vw;
+  border-radius: 10px;
+  z-index: -1;
+}
+#presseausweis-input
+{
+  font-size: 1.5rem;
+}
+#presseausweis-input-bild
+{
+  left: 32.5vw;
+  top: 34vh;
+  position: absolute;
+  width: 10vw;
+}
+#presseausweis-input-name
+{
+  position: absolute;
+  top: 50vh;
+  width: 19.5vw;
+  left: 44vw;
+  height: 3.5vh;
+}
+#presseausweis-input-strasse
+{
+  position: absolute;
+    top: 56vh;
+    height: 3vh;
+    left: 44vw;
+    width: 19.5vw;
+}
+#presseausweis-input-ort
+{
+  left: 44vw;
+  width: 9.75vw;
+  position: absolute;
+  top: 61.5vh;
+  height: 3vh;
+}
+#presseausweis-input-button{
+  position: absolute;
+  top: 80vh;
+  font-size: 2rem;
+}
+#play-button
+{
+  position: absolute;
+  top:10vh;
+  left:50vw;
+  border:none;
+  z-index: 999;
+}
+#game-window
+{
+  display: grid;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  top:0;
+  position: absolute;
+}
+#fly-buttons
+{
+    position: absolute;
+    top:0;
+    right:0;
+    border:none;
+    z-index: 999;
+}
+#files
+{
+  top:55vh;
+  position: absolute;
+  left: 30.5vw;
+}
+#dialog
+{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: grid;
+  z-index: 9999;
+}
+#dialog-text{
+  margin: auto;
+}
+#dialog-img
+{
+  display: grid;
+}
+#dialog-img-img
+{
+  margin: auto;
+}
+#dialog-button
+{
+  width: 10vw;
+  margin-left:42vw;
+}
+.type {
+  color:#0000;
+  background:
+    linear-gradient(-90deg,white 5px,#0000 0) 10px 0,
+    linear-gradient(white 0 0) 0 0;
+  background-size:calc(var(--n)*1ch) 200%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
+  animation: 
+   b .2s 1,   
+   t calc(var(--n)*.3s) steps(var(--n)) forwards;
+}
+
+@keyframes t{
+  from {background-size:0 200%}
+}
+@keyframes b{
+  50% {background-position:0 -100%,0 0}
+}
+.game-container
+{
+  margin:auto;
+}
+.game-video
+{
+  width: 40vw;
+  height: 60vh;
+}
+.p-normal
+{
+  text-align: center;
+  font-size: 2rem;
+  color:white;
+}

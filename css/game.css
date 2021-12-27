@@ -1,0 +1,69 @@
+html,body
+{
+    margin: 0;
+    display: grid;
+}
+div,h1,h2,h3,p,button{
+    margin: 0;
+    font-family: 'Roboto';
+}
+button{
+  
+    margin:auto;
+    background-color:#44c767;
+    border:solid #44c767;
+	border-radius:5px;
+    border-width: 0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Roboto';
+	font-size:1rem;
+	text-decoration:none;
+
+}
+button:hover
+{
+    background-color:black;
+}
+.page{
+    height:100vh;
+    width: 100vw;
+    display: grid;
+}
+
+#page2{
+    background-color: green;
+}
+#labrinth
+{
+    border: solid black;
+    border-radius: 15px;
+    margin: auto;
+    background-color: white;
+}
+#coin{
+    color:yellow;
+}
+#message-box
+{
+    background-color: #f1f1f1;
+    display:grid;
+    position: absolute;
+    top: 40vh;
+    left: 42.5vw;
+    width: 15vw;
+    border: solid;
+    border-width: 1px;
+    border-radius: 33px;
+    text-align: center;
+}
+#message-box-title
+{
+    font-size: 2rem;
+}
+#message-box-text
+{
+    font-size: 1rem;
+    text-align: justify-all;
+}

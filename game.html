@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game's example</title>
+    <style>
+        @import "./css/game.css";
+    </style>
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+<body>
+    <div class="page" id="page1">
+        <canvas id="labrinth">
+
+        </canvas>
+    </div>
+    <img id="coin"src="./img/assets/coin.svg" style="display: none;">
+    <img id="detective" src="img/assets/detective.svg" style="display: none;">
+    <div id="message-box">
+        <div id="message-box-header">
+            <h2 id="message-box-title">Test</h2>
+        </div>
+        <div id="message-box-body">
+            <p id="message-box-text">
+                Lorem ipsum, dolor sit amet consectetur ?
+            </p>
+            
+        </div>
+        <button id="message-box-confirm" >Weiter</button>
+    </div>
+</body>
+<script src="./modules/games/labrinth.js" type="module"></script>
+</html>
