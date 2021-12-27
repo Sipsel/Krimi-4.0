@@ -15,4 +15,16 @@ module.exports = class Location
             }
         )
     }
+    set_longitude(_longitude)
+    {
+        this.longitude = _longitude;
+    }
+    set_latitude(_latitude)
+    {
+        this.latitude = _latitude;
+    }
+    get Coordinates()
+    {
+        return [this.longitude,this.latitude];
+    }
 };
