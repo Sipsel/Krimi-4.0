@@ -14,10 +14,10 @@ import { fromLonLat} from 'ol/proj';
 
 
 //Class imports
-import Player from './player';
+import Player from './classes/Player';
 //function imports
 import { CenterMap } from './map_functions';
-import Location from './classes';
+import Location from './classes/Location';
 
 //debug data
 
